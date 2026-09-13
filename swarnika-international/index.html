@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swarnika International | One Global Brand. Two Strengths.</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Swarnika International Private Limited is an Indian international group operating two divisions: Swarnika Alliance (Global Advisory) and Swarnika Agro (Agro-Industrial). New Delhi HQ & Stavanger Nordic Office.">
+  <meta name="keywords" content="Swarnika International, Swarnika Alliance, Swarnika Agro, Advisory, Trade Corridors, Nordic Office Stavanger, Agro Foods Export">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
+
+  <!-- Three.js 3D WebGL Library from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- GSAP Animation Library & ScrollTrigger Plugin from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- APPLE-STYLE PRELOADER SCREEN -->
+  <div id="apple-preloader">
+    <div class="preloader-monogram"><img src="./assets/logo-icon.svg" alt="Swarnika International"></div>
+    <div style="font-family: var(--font-serif); font-size: 1.2rem; letter-spacing: 0.15em; color: var(--color-gold-light); margin-bottom: 1rem;">
+      SWARNIKA INTERNATIONAL
+    </div>
+    <div class="preloader-bar-bg">
+      <div class="preloader-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- CURSOR AMBIENT SPOTLIGHT -->
+  <div id="cursor-spotlight"></div>
+
+  <!-- HEADER / FLOATING APPLE GLASS NAVIGATION -->
+  <header class="header">
+    <div class="nav-wrapper">
+      <!-- Left: Monogram & Brand Lockup -->
+      <a href="#group-home" class="brand-logo" data-view-trigger="group-home">
+        <div class="brand-monogram"><img src="./assets/logo-icon.svg" alt="Swarnika International"></div>
+        <div class="brand-text">
+          <div class="brand-name">SWARNIKA <span>INTERNATIONAL</span></div>
+        </div>
+      </a>
+
+      <!-- Mobile/Tablet Menu Toggle -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Center & Right: Navigation -->
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-links">
+          <li><a href="#group-home" class="nav-link active" data-view="group-home">GROUP</a></li>
+          <li><a href="#alliance" class="nav-link" data-view="alliance">ALLIANCE</a></li>
+          <li><a href="#agro" class="nav-link" data-view="agro">AGRO</a></li>
+          <li><a href="#news" class="nav-link" data-open-modal="modal-news">NEWS</a></li>
+        </ul>
+        <button class="btn btn-gold" data-view-trigger="contact">Start a Conversation</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN VIEW CONTAINER -->
+  <main id="main-content">
+
+    <!-- ==========================================================================
+       SECTION 6: HOMEPAGE HERO (3D GOLDEN GLOBAL THREAD GLOBE)
+       ========================================================================== -->
+    <section id="group-home" class="view-section active">
+      
+      <div class="hero-3d-wrapper theme-dark">
+        <div class="container">
+          <div class="hero-3d-grid">
+            <!-- Left Editorial Typography -->
+            <div>
+              <div class="hero-eyebrow">SWARNIKA INTERNATIONAL</div>
+              <h1 class="hero-headline">Capital, corridors &amp;<br><em>cultivation.</em></h1>
+              <p class="hero-copy-text">
+                An Indian international group connecting markets, capital and trade across India, Europe, Africa and the Gulf — alongside an agro-industrial business rooted in Indian soil since 2020.
+              </p>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="#group-intro" class="btn btn-gold">Explore the Group</a>
+                <a href="#alliance" class="btn btn-outline-light" data-view-trigger="alliance">Our Divisions</a>
+              </div>
+            </div>
+
+            <!-- Right Interactive 3D Canvas (Three.js Golden Global Thread Globe) -->
+            <div style="position: relative;">
+              <div id="globe-3d-container" class="globe-canvas-container"></div>
+              
+              <!-- Location Overlay Badges -->
+              <div style="position: absolute; bottom: 10px; left: 0; right: 0; display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; pointer-events: none;">
+                <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: var(--color-gold-light); background: rgba(13,20,28,0.85); backdrop-filter: blur(10px); padding: 0.25rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(194,154,59,0.3);">NEW DELHI (ORIGIN)</span>
+                <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.8); background: rgba(13,20,28,0.85); backdrop-filter: blur(10px); padding: 0.25rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.15);">STAVANGER</span>
+                <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.8); background: rgba(13,20,28,0.85); backdrop-filter: blur(10px); padding: 0.25rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.15);">EUROPE</span>
+                <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.8); background: rgba(13,20,28,0.85); backdrop-filter: blur(10px); padding: 0.25rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.15);">AFRICA</span>
+                <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.8); background: rgba(13,20,28,0.85); backdrop-filter: blur(10px); padding: 0.25rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.15);">GULF</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 7: GROUP INTRODUCTION ("One Group. Two Engines.") -->
+      <div id="group-intro" class="group-intro-section theme-light">
+        <div class="container">
+          <span class="section-label-gold">ONE GLOBAL BRAND</span>
+          <h2 class="editorial-title">One group. Two engines.</h2>
+          <p style="max-width: 720px; font-size: 1.15rem; color: #424245;">
+            Swarnika International Private Limited brings together two complementary strengths under one international group umbrella.
+          </p>
+
+          <div class="two-engines-grid">
+            <!-- Engine 1: Swarnika Alliance -->
+            <div class="glass-card">
+              <div>
+                <span style="font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-alliance-slate); font-weight: 700;">ADVISORY DIVISION</span>
+                <h3 style="font-size: 2rem; color: var(--color-ink); margin: 0.5rem 0 1rem 0;">Swarnika Alliance</h3>
+                <p style="font-size: 0.98rem; color: #424245; margin-bottom: 1.5rem;">
+                  Market entry, fundraising and investor access, trade-corridor facilitation and project development for companies and investors moving between India, Europe, Africa and the Gulf.
+                </p>
+                <div style="font-size: 0.75rem; letter-spacing: 0.1em; color: var(--color-alliance-slate); text-transform: uppercase; margin-bottom: 1rem; font-weight: 600;">
+                  A division of Swarnika International
+                </div>
+              </div>
+              <div id="alliance-3d-card" class="card-3d-preview"></div>
+              <div>
+                <a href="#alliance" class="btn btn-slate" data-view-trigger="alliance" style="width: 100%;">Enter Alliance &rarr;</a>
+              </div>
+            </div>
+
+            <!-- Engine 2: Swarnika Agro -->
+            <div class="glass-card">
+              <div>
+                <span style="font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-agro-green); font-weight: 700;">AGRO-INDUSTRIAL DIVISION</span>
+                <h3 style="font-size: 2rem; color: var(--color-ink); margin: 0.5rem 0 1rem 0;">Swarnika Agro</h3>
+                <p style="font-size: 0.98rem; color: #424245; margin-bottom: 1.5rem;">
+                  Horticulture, agro foods, animal husbandry and agri-biotech — quality-certified operations serving Indian and export markets from our founding base in New Delhi.
+                </p>
+                <div style="font-size: 0.75rem; letter-spacing: 0.1em; color: var(--color-agro-green); text-transform: uppercase; margin-bottom: 1rem; font-weight: 600;">
+                  A division of Swarnika International
+                </div>
+              </div>
+              <div id="agro-3d-card" class="card-3d-preview"></div>
+              <div>
+                <a href="#agro" class="btn btn-green" data-view-trigger="agro" style="width: 100%;">Enter Agro &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 8: GLOBAL FOOTPRINT & STATISTICS -->
+      <div id="global-stats-section" class="footprint-dark-section theme-dark">
+        <div class="container">
+          <span style="font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--color-gold-light);">GLOBAL FOOTPRINT</span>
+          <h2 style="font-size: 3rem; color: #FFFFFF; margin-top: 0.5rem;">Built between markets.</h2>
+          <p style="color: rgba(255,255,255,0.8); max-width: 650px;">
+            Connecting India, the Nordics, Europe, Africa, and the Gulf through permanent presence and trusted institutional partnerships.
+          </p>
+
+          <div class="stats-grid-4col">
+            <div class="glass-card" style="background: rgba(22, 34, 47, 0.75) !important; border-color: rgba(194, 154, 59, 0.3) !important;">
+              <div class="stat-number-large count-up" data-target="4">0</div>
+              <div class="stat-desc-label">Continents Served</div>
+            </div>
+            <div class="glass-card" style="background: rgba(22, 34, 47, 0.75) !important; border-color: rgba(194, 154, 59, 0.3) !important;">
+              <div class="stat-number-large count-up" data-target="2020">0</div>
+              <div class="stat-desc-label">Incorporated, New Delhi</div>
+            </div>
+            <div class="glass-card" style="background: rgba(22, 34, 47, 0.75) !important; border-color: rgba(194, 154, 59, 0.3) !important;">
+              <div class="stat-number-large">₹<span class="count-up" data-target="3">0</span> Cr+</div>
+              <div class="stat-desc-label">Group Turnover</div>
+            </div>
+            <div class="glass-card" style="background: rgba(22, 34, 47, 0.75) !important; border-color: rgba(194, 154, 59, 0.3) !important;">
+              <div class="stat-number-large count-up" data-target="27">0</div>
+              <div class="stat-desc-label">Channel Partners</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 9: FOUNDER-LED APPROACH -->
+      <div style="padding: 7rem 0;" class="theme-light">
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div>
+            <span class="section-label-gold">GOVERNANCE &amp; FOCUS</span>
+            <h2 class="editorial-title">Founder-led.<br>Relationship-driven.</h2>
+            <p style="margin-bottom: 1.5rem; color: #424245;">
+              Every mandate is led personally, from first meeting to close, ensuring board-level accountability and zero dilution of purpose.
+            </p>
+            <div class="glass-card" style="padding: 1.5rem; border-left: 4px solid var(--color-gold) !important;">
+              <p style="font-size: 0.95rem; color: var(--color-ink) !important; font-style: italic;">
+                "Our global network connects DFIs, impact funds, corporate promoters, channel partners, and affiliates across primary growth corridors."
+              </p>
+            </div>
+          </div>
+          <div class="glass-card" style="background: var(--color-ink-dark) !important; color: #FFFFFF !important; border-color: rgba(194, 154, 59, 0.3) !important; padding: 3rem;">
+            <h4 style="color: var(--color-gold-light) !important; font-size: 1.35rem; margin-bottom: 1rem;">Institutional Ecosystem</h4>
+            <ul style="list-style: none; line-height: 2; color: rgba(255,255,255,0.85);">
+              <li>&bull; Development Finance Institutions (DFIs)</li>
+              <li>&bull; European &amp; Gulf Impact Funds</li>
+              <li>&bull; Corporate Promoters &amp; Family Offices</li>
+              <li>&bull; 27+ Verified Trade &amp; Channel Partners</li>
+              <li>&bull; Nordic Regional Affiliates</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 10 & 11: SWARNIKA ALLIANCE (ADVISORY DIVISION) (#alliance)
+       ========================================================================== -->
+    <section id="alliance" class="view-section">
+      <div class="division-hero-slate theme-dark">
+        <div class="container">
+          <div style="font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: #7DB2D6; margin-bottom: 1rem; font-weight: 700;">
+            SWARNIKA ALLIANCE &bull; A DIVISION OF SWARNIKA INTERNATIONAL
+          </div>
+          <h1 class="hero-headline">Your partner between<br><em>markets.</em></h1>
+          <p class="hero-copy-text">
+            We open doors that are hard to open alone: market entry into India and Europe, capital from development finance and impact investors, and trade corridors that keep moving when conditions change.
+          </p>
+        </div>
+      </div>
+
+      <!-- Alliance 5 Practice Areas -->
+      <div style="padding: 7rem 0;" class="theme-light">
+        <div class="container">
+          <span class="section-label-gold">PRACTICE AREAS</span>
+          <h2 class="editorial-title">Five practices, one engagement lead</h2>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem;">
+            <div class="glass-card" style="border-top: 4px solid var(--color-gold) !important;">
+              <h3 style="font-size: 1.4rem; color: var(--color-ink); margin-bottom: 0.75rem;">Market Entry &amp; Expansion</h3>
+              <p style="font-size: 0.95rem; color: #424245;">India entry for Nordic and European technology firms; European entry for Indian champions. Strategy through to first revenue.</p>
+            </div>
+            <div class="glass-card" style="border-top: 4px solid var(--color-gold) !important;">
+              <h3 style="font-size: 1.4rem; color: var(--color-ink); margin-bottom: 0.75rem;">Capital &amp; Investor Access</h3>
+              <p style="font-size: 0.95rem; color: #424245;">Fundraising strategy and investor introductions across DFIs, impact funds and family offices in Europe and beyond.</p>
+            </div>
+            <div class="glass-card" style="border-top: 4px solid var(--color-gold) !important;">
+              <h3 style="font-size: 1.4rem; color: var(--color-ink); margin-bottom: 0.75rem;">Trade Corridors</h3>
+              <p style="font-size: 0.95rem; color: #424245;">Structuring, insurance and counterpart networks for India–Europe, India–Africa and friendly-origin trade flows.</p>
+            </div>
+            <div class="glass-card" style="border-top: 4px solid var(--color-gold) !important;">
+              <h3 style="font-size: 1.4rem; color: var(--color-ink); margin-bottom: 0.75rem;">Project Development</h3>
+              <p style="font-size: 0.95rem; color: #424245;">Sponsor-side development of energy and infrastructure projects, including solar IPPs in African markets.</p>
+            </div>
+            <div class="glass-card" style="border-top: 4px solid var(--color-gold) !important;">
+              <h3 style="font-size: 1.4rem; color: var(--color-ink); margin-bottom: 0.75rem;">Representation &amp; Events</h3>
+              <p style="font-size: 0.95rem; color: #424245;">Talent representation, summits and convening programmes that build presence in new markets.</p>
+            </div>
+            <div class="glass-card" style="background: var(--color-ink-dark) !important; color: #FFFFFF !important; border-color: var(--color-alliance-slate) !important;">
+              <h3 style="font-size: 1.4rem; color: var(--color-gold-light) !important; margin-bottom: 0.75rem;">Engagement Model</h3>
+              <p style="font-size: 0.95rem; color: rgba(255,255,255,0.85) !important;">Retainer + success fee, with selective equity participation where we believe in the long-term success of the venture.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 11: ALLIANCE INTERACTIVE CORRIDORS -->
+      <div style="padding: 6rem 0;" class="theme-light">
+        <div class="container">
+          <span class="section-label-gold">GEOGRAPHIC CORRIDORS</span>
+          <h2 class="editorial-title">Active Mandate Corridors</h2>
+          <p style="color: #424245;">Select a corridor to highlight corresponding routes on the 3D globe network.</p>
+
+          <div class="corridor-selector-bar" style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem;">
+            <button class="corridor-btn active" data-corridor-key="nordics">India ⇄ Nordics</button>
+            <button class="corridor-btn" data-corridor-key="europe">India ⇄ Europe</button>
+            <button class="corridor-btn" data-corridor-key="africa">India ⇄ Africa</button>
+            <button class="corridor-btn" data-corridor-key="gulf">India ⇄ Gulf</button>
+            <button class="corridor-btn" data-corridor-key="friendly-origin">Friendly-origin trade</button>
+          </div>
+
+          <div id="corridor-dynamic-info" class="glass-card" style="margin-top: 2rem;">
+            <h4 style="font-family: var(--font-sans); font-weight: 700; font-size: 1.6rem; color: var(--color-ink); margin-bottom: 0.5rem;">India ⇄ Nordics Corridor</h4>
+            <p style="color: #424245; font-size: 1.05rem; margin-bottom: 1rem;">
+              Headquartered in Stavanger, Norway (Nordic Office), we facilitate technology transfer, green energy transitions, and market entry between Scandinavia and India.
+            </p>
+            <div style="display: inline-block; background: rgba(194, 154, 59, 0.15); color: var(--color-gold-deep); padding: 0.4rem 1rem; border-radius: var(--radius-pill); font-size: 0.85rem; font-weight: 700;">
+              Stavanger Base &bull; Cleantech &amp; Offshore Energy
+            </div>
+          </div>
+
+          <div style="margin-top: 3rem; text-align: center;">
+            <button class="btn btn-gold" data-view-trigger="contact">Discuss a Mandate</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 12: NORDIC OFFICE (Stavanger, Norway) -->
+      <div style="padding: 7rem 0;" class="theme-dark">
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div>
+            <span style="font-size: 0.75rem; letter-spacing: 0.25em; color: var(--color-gold-light); text-transform: uppercase; font-weight: 700;">STAVANGER, NORWAY</span>
+            <h2 style="font-size: 3rem; color: #FFFFFF; margin: 0.5rem 0 1.5rem 0;">A Nordic base for global corridors.</h2>
+            <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">
+              The group maintains its own Nordic presence presenting as <strong>Swarnika Alliance — Nordic Office, Stavanger</strong>, serving Norway, Denmark, and the wider Nordics.
+            </p>
+            <a href="#contact" class="btn btn-gold" data-view-trigger="contact">Nordic Office &rarr;</a>
+          </div>
+          <div class="glass-card" style="background: rgba(46,75,96,0.4) !important; border-color: rgba(194,154,59,0.3) !important; padding: 3.5rem; text-align: center;">
+            <div style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-gold-light) !important; margin-bottom: 0.5rem;">STAVANGER</div>
+            <div style="font-size: 0.8rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.85) !important; text-transform: uppercase; font-weight: 600;">NORWEGIAN BRANCH &bull; NORDIC HUB</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 13, 14 & 15: SWARNIKA AGRO (AGRO-INDUSTRIAL DIVISION) (#agro)
+       ========================================================================== -->
+    <section id="agro" class="view-section">
+      <div class="division-hero-green theme-dark">
+        <div class="container">
+          <div style="font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: #98D088; margin-bottom: 1rem; font-weight: 700;">
+            SWARNIKA AGRO &bull; A DIVISION OF SWARNIKA INTERNATIONAL &bull; EST. 2020
+          </div>
+          <h1 class="hero-headline">Rooted in Indian soil,<br><em>grown for the world.</em></h1>
+          <p class="hero-copy-text">
+            From horticulture and animal husbandry to processed agro foods and agri-biotech, Swarnika Agro supplies Indian and export markets with certified quality — the founding business of the Swarnika group.
+          </p>
+        </div>
+      </div>
+
+      <!-- SECTION 14: AGRO BUSINESS LINES -->
+      <div style="padding: 7rem 0;" class="theme-light">
+        <div class="container">
+          <span class="section-label-gold">LINES OF BUSINESS</span>
+          <h2 class="editorial-title">Four lines, one standard</h2>
+
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 3.5rem;">
+            <div class="glass-card" style="border-left: 4px solid var(--color-agro-green) !important;">
+              <h3 style="font-size: 1.6rem; color: var(--color-ink); margin-bottom: 0.75rem;">Horticulture</h3>
+              <p style="font-size: 1rem; color: #424245;">Fruit and vegetable cultivation programmes with grower partnerships across North India.</p>
+            </div>
+            <div class="glass-card" style="border-left: 4px solid var(--color-agro-green) !important;">
+              <h3 style="font-size: 1.6rem; color: var(--color-ink); margin-bottom: 0.75rem;">Agro Foods</h3>
+              <p style="font-size: 1rem; color: #424245;">Processing and trading of staples and value-added foods for domestic and export buyers.</p>
+            </div>
+            <div class="glass-card" style="border-left: 4px solid var(--color-agro-green) !important;">
+              <h3 style="font-size: 1.6rem; color: var(--color-ink); margin-bottom: 0.75rem;">Animal Husbandry</h3>
+              <p style="font-size: 1rem; color: #424245;">Dairy and livestock support services built on veterinary-grade practices.</p>
+            </div>
+            <div class="glass-card" style="border-left: 4px solid var(--color-agro-green) !important;">
+              <h3 style="font-size: 1.6rem; color: var(--color-ink); margin-bottom: 0.75rem;">Agri-Biotech</h3>
+              <p style="font-size: 1rem; color: #424245;">Inputs and bio-solutions that raise yield while protecting soil health.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 15: QUALITY & CERTIFICATION -->
+      <div style="padding: 6rem 0;" class="theme-light">
+        <div class="container" style="text-align: center;">
+          <span class="section-label-gold">TRUST &amp; COMPLIANCE</span>
+          <h2 class="editorial-title">One standard. Full traceability.</h2>
+          <p style="max-width: 650px; margin: 0 auto 2.5rem auto; color: #424245;">
+            FSSAI-licensed operations with full traceability. IEC-registered for international trade under Swarnika International. Certification details and audit documentation available to trade partners on request.
+          </p>
+          <button class="btn btn-green" data-view-trigger="contact">Start an Agro Enquiry</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 16 & 17: GROUP STORY & DUAL CONTACT DESKS (#contact)
+       ========================================================================== -->
+    <section id="contact" class="view-section">
+
+      <!-- SECTION 17: DUAL ENQUIRY PATHS -->
+      <div class="dual-enquiry-section theme-dark">
+        <div class="container">
+          <div style="text-align: center;">
+            <span style="font-size: 0.75rem; letter-spacing: 0.25em; color: var(--color-gold-light); text-transform: uppercase; font-weight: 700;">DIRECT ENQUIRY PATHS</span>
+            <h2 style="font-size: 3.2rem; color: #FFFFFF; margin-top: 0.5rem;">Let's build the next corridor.</h2>
+            <p style="color: rgba(255,255,255,0.8); max-width: 550px; margin: 0 auto;">Tell us where you want to go. Select your specific division desk below.</p>
+          </div>
+
+          <div class="dual-desks-grid">
+            <!-- Desk 1: Swarnika Alliance Desk -->
+            <div class="glass-enquiry-box alliance-desk">
+              <span style="font-size: 0.72rem; letter-spacing: 0.2em; color: #7DB2D6; text-transform: uppercase; font-weight: 700;">ALLIANCE ADVISORY DESK</span>
+              <h3 style="font-size: 1.8rem; color: #FFFFFF; margin: 0.35rem 0 1rem 0;">Start an Alliance Enquiry</h3>
+              <p style="font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-bottom: 1.5rem;">
+                For Market Entry, Capital &amp; Investor Access, Trade Corridors, Project Development, or Representation.
+              </p>
+
+              <form id="alliance-enquiry-form">
+                <div class="form-group">
+                  <label class="form-label" for="alliance-name">Full Name *</label>
+                  <input type="text" id="alliance-name" class="form-input" required placeholder="Name and title">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="alliance-email">Corporate Email *</label>
+                  <input type="email" id="alliance-email" class="form-input" required placeholder="name@company.com">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="alliance-topic">Practice Interest</label>
+                  <select id="alliance-topic" class="form-select">
+                    <option>Market Entry &amp; Expansion</option>
+                    <option>Capital &amp; Investor Access</option>
+                    <option>Trade Corridors</option>
+                    <option>Project Development</option>
+                    <option>Representation &amp; Events</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="alliance-msg">Mandate Details *</label>
+                  <textarea id="alliance-msg" class="form-textarea" rows="3" required placeholder="Describe target corridors or capital objectives..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-slate" style="width: 100%;">Dispatch to Alliance Desk</button>
+              </form>
+            </div>
+
+            <!-- Desk 2: Swarnika Agro Desk -->
+            <div class="glass-enquiry-box agro-desk">
+              <span style="font-size: 0.72rem; letter-spacing: 0.2em; color: #98D088; text-transform: uppercase; font-weight: 700;">AGRO OPERATIONS DESK</span>
+              <h3 style="font-size: 1.8rem; color: #FFFFFF; margin: 0.35rem 0 1rem 0;">Start an Agro Enquiry</h3>
+              <p style="font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-bottom: 1.5rem;">
+                For Products, Trade, Horticulture, Agro Foods, Agri-Biotech, or Certification Documentation.
+              </p>
+
+              <form id="agro-enquiry-form">
+                <div class="form-group">
+                  <label class="form-label" for="agro-name">Contact Name *</label>
+                  <input type="text" id="agro-name" class="form-input" required placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="agro-email">Business Email *</label>
+                  <input type="email" id="agro-email" class="form-input" required placeholder="trade@company.com">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="agro-line">Product Interest</label>
+                  <select id="agro-line" class="form-select">
+                    <option>Horticulture (Fresh Produce)</option>
+                    <option>Agro Foods &amp; Processed Staples</option>
+                    <option>Animal Husbandry Services</option>
+                    <option>Agri-Biotech Inputs</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="agro-msg">Trade Requirements *</label>
+                  <textarea id="agro-msg" class="form-textarea" rows="3" required placeholder="Specify volumes, destination port, or certification requests..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-green" style="width: 100%;">Dispatch to Agro Desk</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group Story -->
+      <div style="padding: 7rem 0;" class="theme-light">
+        <div class="container" style="max-width: 800px; text-align: center;">
+          <span class="section-label-gold">OUR STORY</span>
+          <h2 class="editorial-title">From India, built for the world.</h2>
+          <p style="font-size: 1.25rem; color: var(--color-ink); font-family: var(--font-serif); line-height: 1.7;">
+            Swarnika International Private Limited unifies advisory expertise with agro-industrial foundations. Rooted in Indian soil and connecting global corridors, we build long-term value across four continents.
+          </p>
+          <div style="margin-top: 2rem; font-size: 1.15rem; color: var(--color-gold-deep); font-weight: 700; letter-spacing: 0.05em;">
+            ONE GLOBAL BRAND. TWO STRENGTHS.
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION: BRAND & TRANSITION BLUEPRINT -->
+      <div class="transition-section theme-dark">
+        <div class="container">
+          <div style="text-align: center; max-width: 720px; margin: 0 auto 3rem;">
+            <span class="section-label-gold">TRANSITION ROADMAP</span>
+            <h2 class="editorial-title" style="color: #FFFFFF;">Fourteen weeks, six phases</h2>
+            <p style="color: rgba(255,255,255,0.8);">
+              Legal continuity is preserved throughout: the CIN and financial history stay with the entity. The ROC name change is the pacing item; everything else runs in parallel around it.
+            </p>
+            <div class="blueprint-notice">
+              Professional sign-off required. The MOA amendment, name change, novation strategy, and anything touching obligations to the Innowiz partners must be executed by a practising Company Secretary and lawyer. This blueprint is a working plan, not legal advice.
+            </div>
+          </div>
+
+          <div class="phase-grid">
+            <div class="glass-card phase-card">
+              <span class="phase-weeks">WEEKS 1–4 · LEGAL COUNSEL + YOU</span>
+              <h3>Untangle Innowiz cleanly</h3>
+              <p>Inventory every contract, retainer, and success-fee agreement held in Innowiz's name. Review the partnership deed for noncompete, non-solicit, and IP clauses. Decide per client: novation vs. fresh engagement letter under the new entity. Nothing is announced until this is mapped.</p>
+            </div>
+            <div class="glass-card phase-card">
+              <span class="phase-weeks">WEEKS 3–8 · COMPANY SECRETARY</span>
+              <h3>Restructure the entity</h3>
+              <p>Amend the MOA object clause to add management consulting, advisory, international trade facilitation, and business development (special resolution + MGT-14). File the RUN application for the name change to Swarnika International Private Limited; obtain the fresh Certificate of Incorporation. Reconstitute board and shareholding deliberately — this is the moment to design governance you control.</p>
+            </div>
+            <div class="glass-card phase-card">
+              <span class="phase-weeks">WEEKS 6–10 · CA / CS</span>
+              <h3>Update registrations</h3>
+              <p>GST, PAN/TAN records, bank accounts, FSSAI (name update, licence continuity), and obtain an Importer-Exporter Code for the trade-corridor work. File trademark applications for SWARNIKA INTERNATIONAL and SWARNIKA ALLIANCE (India, Class 35/36; EUIPO to follow).</p>
+            </div>
+            <div class="glass-card phase-card">
+              <span class="phase-weeks">WEEKS 6–10 · BRAND + WEB</span>
+              <h3>Build the brand &amp; website</h3>
+              <p>Commission final logo artwork against the identity specification. Secure swarnikainternational.com and mail migration. Build the group website (pages 7–9); prepare rebranded deck, letterhead, engagement-letter and invoice templates.</p>
+            </div>
+            <div class="glass-card phase-card">
+              <span class="phase-weeks">WEEKS 10–12 · YOU PERSONALLY</span>
+              <h3>Run the communication sequence</h3>
+              <p>Private client letters first, contract novation second, public announcement last — the full package and drafts are on page 5. Brief the 27-partner channel network and Nordic stakeholders with updated collateral.</p>
+            </div>
+            <div class="glass-card phase-card">
+              <span class="phase-weeks">WEEKS 12–14 · GROUP</span>
+              <h3>Go live &amp; align globally</h3>
+              <p>Website launch with redirects from swarnikaagro.com and innowizconsulting.com (where controllable). Formalise the Stavanger presence under the group's own name — a Norwegian branch (NUF) or a subsidiary such as Swarnika International Nordic AS — so Nordic contracts and revenue flow correctly to the group. First invoices issue under Swarnika International Private Limited.</p>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 3.5rem; max-width: 680px; margin-left: auto; margin-right: auto;">
+            <span class="section-label-gold">COMMUNICATION PACKAGE</span>
+            <h3 style="color: #FFFFFF; font-family: var(--font-serif); font-style: italic; font-size: 1.6rem; margin: 0.5rem 0 1rem;">Growth story, never an exit story</h3>
+            <p style="color: rgba(255,255,255,0.8);">The narrative is consolidation and scale — bringing the advisory practice and the agro-industrial business under one international group. Sequence is everything: no client should learn of the change from LinkedIn.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- SECTION 18: FOOTER -->
+  <footer class="footer theme-dark">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 3rem; flex-wrap: wrap; margin-bottom: 3rem;">
+        <div>
+          <div style="font-family: var(--font-sans); font-weight: 700; font-size: 1.6rem; color: var(--color-gold-light); letter-spacing: 0.12em; margin-bottom: 0.35rem;">
+            SWARNIKA INTERNATIONAL
+          </div>
+          <div style="font-size: 0.8rem; letter-spacing: 0.18em; color: rgba(255,255,255,0.7); text-transform: uppercase; font-weight: 600;">
+            NEW DELHI &bull; STAVANGER &bull; FOUR CONTINENTS
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 2rem;">
+          <a href="#group-home" class="nav-link" data-view-trigger="group-home">GROUP</a>
+          <a href="#alliance" class="nav-link" data-view-trigger="alliance">ALLIANCE</a>
+          <a href="#agro" class="nav-link" data-view-trigger="agro">AGRO</a>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(255,255,255,0.12); padding-top: 2rem; display: flex; justify-content: center; align-items: center; font-size: 0.8rem; color: rgba(255,255,255,0.7);">
+        <div>&copy; 2026 Swarnika International Pvt Ltd. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- News Modal -->
+  <div id="modal-news" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Group News &amp; Bulletins</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: rgba(255,255,255,0.85);"><strong>July 2026:</strong> Swarnika International Private Limited launches unified global group architecture uniting Swarnika Alliance and Swarnika Agro.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JavaScript Engine -->
+  <script src="./js/app.js"></script>
+</body>
+</html>
